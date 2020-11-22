@@ -1,15 +1,22 @@
 import React from "react";
-import { Text, TouchableOpacityProps } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { Text } from "react-native";
+import {
+  TouchableOpacity,
+  TouchableOpacityProps as ThemedTouchableOpacityProps,
+  useThemeColor,
+} from "../Themed";
 import styles from "./styles";
 
-interface Props extends TouchableOpacityProps {
+interface Props {
   label: string;
 }
-const Button: React.FC<Props> = ({ label, ...rest }) => {
+export type ButtonProps = Props & ThemedTouchableOpacityProps;
+
+const Button: React.FC<ButtonProps> = ({ label, ...rest }) => {
   return (
     <TouchableOpacity style={styles.button} {...rest}>
       <Text style={styles.buttonText}>{label}</Text>
+      {rest.children}
     </TouchableOpacity>
   );
 };

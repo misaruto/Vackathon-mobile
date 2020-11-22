@@ -1,16 +1,23 @@
 import React from "react";
-import { Text, TouchableOpacityProps } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import {
+  Text,
+  ThemedLink,
+  TouchableOpacityProps as ThemedTouchableOpacityProps,
+} from "../Themed";
+
 import styles from "./styles";
 
-interface Props extends TouchableOpacityProps {
-  label: string;
+interface Props {
+  label?: string;
 }
-const Link: React.FC<Props> = ({ label, ...rest }) => {
+export type LinkProps = Props & ThemedTouchableOpacityProps;
+
+const Link: React.FC<LinkProps> = ({ label, ...rest }) => {
   return (
-    <TouchableOpacity style={styles.link} {...rest}>
-      <Text style={styles.linkText}>{label}</Text>
-    </TouchableOpacity>
+    <ThemedLink style={styles.link} {...rest}>
+      {label && <Text style={styles.linkText}>{label}</Text>}
+      {rest.children}
+    </ThemedLink>
   );
 };
 

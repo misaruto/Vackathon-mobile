@@ -1,5 +1,9 @@
 import * as React from "react";
 import { Text as DefaultText, View as DefaultView } from "react-native";
+import {
+  TouchableOpacity as DefaultTouchableOpacity,
+  ScrollView as DefaultScrollView,
+} from "react-native-gesture-handler";
 
 import Colors from "../../constants/Colors";
 import useColorScheme from "../../hooks/useColorScheme";
@@ -25,6 +29,10 @@ type ThemeProps = {
 
 export type TextProps = ThemeProps & DefaultText["props"];
 export type ViewProps = ThemeProps & DefaultView["props"];
+export type TouchableOpacityProps = ThemeProps &
+  DefaultTouchableOpacity["props"];
+
+export type ScrollView = ThemeProps & DefaultScrollView["props"];
 
 export function Text(props: TextProps) {
   const { style, lightColor, darkColor, ...otherProps } = props;
@@ -39,6 +47,57 @@ export function View(props: ViewProps) {
     { light: lightColor, dark: darkColor },
     "background"
   );
-
   return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
+}
+
+export function ScrollView(props: ViewProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const backgroundColor = useThemeColor(
+    { light: lightColor, dark: darkColor },
+    "background"
+  );
+  return (
+    <DefaultScrollView style={[{ backgroundColor }, style]} {...otherProps} />
+  );
+}
+
+export function Label(props: ViewProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const backgroundColor = useThemeColor(
+    { light: lightColor, dark: darkColor },
+    "labelLeitura"
+  );
+  return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
+}
+
+export function TouchableOpacity(props: TouchableOpacityProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const backgroundColor = useThemeColor(
+    { light: lightColor, dark: darkColor },
+    "touchableOpacity"
+  );
+  return (
+    <DefaultTouchableOpacity
+      style={[{ backgroundColor }, style]}
+      {...otherProps}
+    >
+      {otherProps.children}
+    </DefaultTouchableOpacity>
+  );
+}
+
+export function ThemedLink(props: TouchableOpacityProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const backgroundColor = useThemeColor(
+    { light: lightColor, dark: darkColor },
+    "background"
+  );
+  return (
+    <DefaultTouchableOpacity
+      style={[{ backgroundColor }, style]}
+      {...otherProps}
+    >
+      {otherProps.children}
+    </DefaultTouchableOpacity>
+  );
 }

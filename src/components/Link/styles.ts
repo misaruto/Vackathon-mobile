@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     width: "100%",
     fontSize: 20,
     fontWeight: "700",
+    textDecorationLine: "underline",
   },
 });
 

@@ -1,14 +1,14 @@
 import React, { Children } from "react";
-
 import { ViewProps } from "react-native";
 
-import { LinearGradient } from "expo-linear-gradient";
+import { View } from "../Themed";
+import styles from "./styles";
 
 const Container: React.FC<ViewProps> = (props) => {
   return (
-    <LinearGradient {...props} colors={[]}>
+    <View {...props} style={styles.container}>
       {props.children}
-    </LinearGradient>
+    </View>
   );
 };
 export default Container;
