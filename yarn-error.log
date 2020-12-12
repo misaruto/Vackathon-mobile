@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add @types/react-native-paper
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add @types/react-native-event-listener -D
 
 PATH: 
-  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /home/misael/.local/bin:/usr/bin:/home/misael/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.22.5
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2freact-native-paper: Not found
+  Error: https://registry.yarnpkg.com/@types%2freact-native-event-listener: Not found
       at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66988:18)
       at Request.self.callback (/usr/share/yarn/lib/cli.js:140749:22)
       at Request.emit (events.js:315:20)
@@ -71,6 +71,7 @@ npm manifest:
       "react-hook-form": "^6.9.6",
       "react-instantsearch-native": "^6.8.2",
       "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
+      "react-native-event-listener": "^1.0.2",
       "react-native-gesture-handler": "~1.7.0",
       "react-native-paper": "^4.4.0",
       "react-native-reanimated": "^1.13.2",
@@ -7145,6 +7146,13 @@ Lockfile:
     version "16.13.1"
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
     integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+  
+  react-native-event-listener@^1.0.2:
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/react-native-event-listener/-/react-native-event-listener-1.0.2.tgz#6c3a5be6fe26229dda6f28ae85f6b26fc7ea24e2"
+    integrity sha512-KFw7NNm3bxL1uM5Rfwnk0HjlpAD8msMNOvi4bNM7Ay0R7MwqlzqcayA5ke2fUYc/2bXsn5ByeXBitSsmivfKcA==
+    dependencies:
+      prop-types "^15.6.0"
   
   react-native-gesture-handler@~1.7.0:
     version "1.7.0"

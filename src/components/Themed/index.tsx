@@ -1,4 +1,5 @@
-import * as React from "react";
+import AsyncStorage from "@react-native-community/async-storage";
+import React, { useEffect, useState } from "react";
 import { Text as DefaultText, View as DefaultView } from "react-native";
 import {
   TouchableOpacity as DefaultTouchableOpacity,
@@ -14,7 +15,6 @@ export function useThemeColor(
 ) {
   const theme = useColorScheme();
   const colorFromProps = props[theme];
-
   if (colorFromProps) {
     return colorFromProps;
   } else {

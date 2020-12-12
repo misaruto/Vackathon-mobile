@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Image, useColorScheme } from "react-native";
+import React from "react";
+import { Image } from "react-native";
 import { Text, View, ViewProps } from "../Themed";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import styles from "./styles";
@@ -14,9 +14,9 @@ interface Props extends ViewProps {
   backLink: Boolean;
 }
 const Header: React.FC<Props> = (props) => {
-  const { goBack } = useNavigation();
+  const navigation = useNavigation();
   function handleNavigateBack() {
-    goBack();
+    navigation.goBack();
   }
   return (
     <View style={styles.header}>

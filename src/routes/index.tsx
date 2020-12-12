@@ -8,9 +8,12 @@ import * as React from "react";
 import { ColorSchemeName } from "react-native";
 
 import { RootStackParamList } from "../../types";
-import BottomTabNavigator from "./BottomTabNavigator";
+
 import LinkingConfiguration from "./LinkingConfiguration";
+
 import Login from "../screens/Login";
+
+import DrawerNavigator from "./DrawerNavigator";
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -36,10 +39,7 @@ function MainStackScreen() {
   return (
     <MainStack.Navigator screenOptions={{ headerShown: false }}>
       <MainStack.Screen name="Login" component={Login} />
-      <MainStack.Screen
-        name="BottomTabNavigator"
-        component={BottomTabNavigator}
-      />
+      <MainStack.Screen name="BottomTabNavigator" component={DrawerNavigator} />
     </MainStack.Navigator>
   );
 }

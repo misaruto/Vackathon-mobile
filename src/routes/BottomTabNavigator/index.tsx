@@ -3,20 +3,20 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 
-import Colors from "../constants/Colors";
-import useColorScheme from "../hooks/useColorScheme";
+import Colors from "../../constants/Colors";
+import useColorScheme from "../../hooks/useColorScheme";
 
 import {
   BottomTabParamList,
   HomeParamList,
   HistoryParamList,
   NewNavigatorParamList,
-} from "../../types";
-import New from "../screens/New";
-import Settings from "../screens/Settings";
-import Home from "../screens/Home";
-import History from "../screens/History";
-import ReadNew from "../screens/New/ReadNew";
+} from "../../../types";
+import New from "../../screens/New";
+import Settings from "../../screens/Settings";
+import Home from "../../screens/Home";
+import History from "../../screens/History";
+import ReadNew from "../../screens/New/ReadNew";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 

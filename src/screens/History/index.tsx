@@ -36,16 +36,8 @@ function History() {
 
       <ScrollView style={{ height: "50%" }}>
         <HistoryItem history={history} />
-        <HistoryItem history={history} />
-        <HistoryItem history={history} />
-        <HistoryItem history={history} />
-        <HistoryItem history={history} />
-        <HistoryItem history={history} />
-        <HistoryItem history={history} />
-        <HistoryItem history={history} />
-        <HistoryItem history={history} />
-        <HistoryItem history={history} />
-        <HistoryItem history={history} />
+        <HistoryItem history={{ id: "1", data: "08/11/2020", hora: "10:44" }} />
+        <HistoryItem history={{ id: "1", data: "04/11/2020", hora: "08:12" }} />
       </ScrollView>
     </View>
   );

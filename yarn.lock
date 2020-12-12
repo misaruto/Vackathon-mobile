@@ -7021,10 +7021,10 @@ react-fast-compare@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
 
-react-hook-form@^6.9.6:
-  version "6.9.6"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-6.9.6.tgz#bbcdfa34a660edcdd160cba2d501583b0e3d60a9"
-  integrity sha512-TyLqWHgFS1WLELDuUBvMWLHEzmR7aS7xOY+eOxMtS1w4jFhqF1xmHnMhJsbiFPSgC+OeTJ1Pc0U4K0y6cA7ERA==
+react-hook-form@^6.13.0:
+  version "6.13.0"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-6.13.0.tgz#91e6da52cd3a636724b38ad8bc3704d7bd8a2626"
+  integrity sha512-AADO0EtAGEggII3DNhBCwm7MSwkBWCVo72K32NY6YzhSTBL5bJsBfWJ4/PVGBer31js5ppt+I6/qUyLo8o8AvA==
 
 react-instantsearch-core@^6.8.2:
   version "6.8.2"
@@ -7049,6 +7049,15 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1, react-
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-native-appearance@~0.3.3:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/react-native-appearance/-/react-native-appearance-0.3.4.tgz#2cbcbc5142cdc1898c116684f519b16c879cbec2"
+  integrity sha512-Vz3zdJbAEiMDwuw6wH98TT1WVfBvWjvANutYtkIbl16KGRCigtSgt6IIiLsF3/TSS3y3FtHhWDelFeGw/rtuig==
+  dependencies:
+    fbemitter "^2.1.1"
+    invariant "^2.2.4"
+    use-subscription "^1.0.0"
 
 react-native-gesture-handler@~1.7.0:
   version "1.7.0"

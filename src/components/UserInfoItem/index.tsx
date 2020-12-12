@@ -1,6 +1,6 @@
-import { SimpleLineIcons } from "@expo/vector-icons";
 import React from "react";
-import { Image } from "react-native";
+import { SimpleLineIcons } from "@expo/vector-icons";
+import { Avatar, Title } from "react-native-paper";
 
 import { View, Text } from "../Themed";
 import styles from "./styles";
@@ -17,22 +17,24 @@ export interface IUser {
 const UserInfoItem: React.FC<IUser> = ({ user }, props) => {
   return (
     <View style={styles.container} {...props}>
-      <View style={styles.imageContainer}>
+      <View>
         {user.imgUri === "" ? (
-          <SimpleLineIcons
-            name="user"
-            size={52}
-            color="#0a0a0a"
-            style={{ textAlign: "center", alignSelf: "center" }}
-          />
+          <View style={styles.imageContainer}>
+            <SimpleLineIcons
+              name="user"
+              size={40}
+              color="#0a0a0a"
+              style={{ textAlign: "center", alignSelf: "center" }}
+            />
+          </View>
         ) : (
-          <Image source={{ uri: user.imgUri }} style={styles.image} />
+          <Avatar.Image source={{ uri: user.imgUri }} />
         )}
       </View>
       <View style={styles.userInfoContainer}>
         <Text style={styles.userName}>{user.nome}</Text>
         <Text>
-          <SimpleLineIcons name="location-pin" size={12} color="black" />
+          <SimpleLineIcons name="location-pin" size={14} />
           {user.cidade} - {user.uf}
         </Text>
       </View>
